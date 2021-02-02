@@ -3,8 +3,11 @@ import styles from './Future.module.scss'
 
 function Future() {
   return (
-    <div className={styles.mainContainer}>
-      Future
-    </div>
+    <Layout title="future">
+      <div className={styles.futureContainer}>
+        Future
+      </div>
+    </Layout>
   )
 }
+export default Future;

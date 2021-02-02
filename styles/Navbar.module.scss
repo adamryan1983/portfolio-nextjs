@@ -1,0 +1,39 @@
+@import './variables';
+
+.menu {
+  display: flex;
+  justify-content: center;
+  & ul {
+    list-style: none;
+    & li {
+      display: inline-block;
+      padding:  0 0.8rem;
+      & a {
+        text-decoration: none;
+        color: $fourthColor;
+        border: none;
+        &:hover {
+          background-color: $thirdColor;
+        }
+      }
+    }
+  }
+}
+
+.lightdarkManip {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 0.4rem;
+  &:hover {
+    color: $thirdColor;
+  }
+}
+
+#currentPage {
+  background: white;
+  opacity: 90%;
+  color: rgba(0, 0, 0, 0.658);
+}

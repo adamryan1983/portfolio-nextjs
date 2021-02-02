@@ -1,18 +1,15 @@
-import Head from 'next/head'
+import React, {useState} from 'react'
 import Layout from "../components/Layout";
-import styles from '../styles/Home.module.css'
+import Home from '../components/Home'
 
 
-export default function Home() {
+export default function Index() {
+  const [theme, setTheme] = useState("dark")
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>this is adam ryan</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Layout>
-        Main page here
-      </Layout>;
-    </div>
+    <>
+      <Layout title="this is adam ryan" theme="theme" setTheme="setTheme">
+        <Home theme="theme" setTheme="setTheme"/>
+      </Layout>
+    </>
   )
 }

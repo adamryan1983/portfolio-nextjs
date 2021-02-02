@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Roboto+Mono:wght@400&display=swap");
+
+@import './variables.scss';
+
+html,
+body {
+  box-sizing: border-box;
+  // font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
+  background-color: $mainColor;
+  color: $mainText;
+  & a {
+    border-bottom: 4px solid $thirdColorLighter;
+    text-decoration: none;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
