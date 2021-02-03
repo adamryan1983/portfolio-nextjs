@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.futureContainer {
+  display: flex;
+  padding: 3rem 8rem;
+  & ul {
+  list-style: none;
+  }
+  & h1, h2, h3, h4, h5 {
+    color: $fifthColor;
+    font-weight: bold;
+    padding: 1rem 0 0.5rem 0;
+  }
+  & a {
+    color: $secondaryColor;
+    &:hover {
+      color: $fourthColor;
+    }
+  }
+  & li {
+    padding: 0.1rem;
+  }
+}
+
+.textPink {
+  color: #F9A8D4;
+}
+.textGreen {
+  color: #6EE7B7;
+}
+
+.hashTitle {
+  padding: 2rem 0 1rem 0;
+  color: #60A5FA;
+}
+
+@media only screen and (max-width: 960px) {
+  .futureContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+  }
+}

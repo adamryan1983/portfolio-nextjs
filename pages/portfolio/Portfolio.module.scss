@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.portfolioContainer {
+  margin: 3rem 5rem;
+  & h1,h2,h3,h4,h5 {
+    color: $thirdColor;
+  }
+}
+
+.portfolioContents {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: flex-start;
+  & > * {
+    width: 30%;
+    border: 1px solid white;
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+.contactContainer {
+  padding: 3rem 5rem;
+  & h1,h2,h3,h4,h5 {
+    color: $fifthColor;
+  }
+  & a {
+    color: $fourthColor;
+    &:hover {
+      background: $thirdColor
+    }
+  }
+}
+
+.textBlue {
+  color: #60A5FA;
+}
+
+.contactLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 3rem 0 2rem 0;;
+
+  & li {
+    list-style: none;
+  }
+  & .contactBlock {
+    padding: 0.6rem 0 2.5rem 0;
+  }
+}
+
+//responsive queries
+@media only screen and (max-width: 1024px) {
+
+  .contactLayout {
+    width: 100%;
+    justify-content: space-between;
+    & > * {
+      padding: 0 1rem;
+      width: 50%;
+    }
+  }
+  .contactBlock {
+    padding: 4rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contactLayout {
+    flex-direction: column;
+    & > * {
+      padding: 1rem 0 0 0;
+    }
+  }
+}
