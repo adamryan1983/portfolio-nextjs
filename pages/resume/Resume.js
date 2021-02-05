@@ -18,7 +18,7 @@ function Resume() {
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span> sudo nano adamryan-resume.txt </p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} Enter admin password: </p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} Password correct</p>
-          <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} . . . file opening</p>
+          <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} <span className={styles.typing}> . . file opening</span></p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>
           <div className={styles.resumeContent}>
           <pre className={styles.ascii}>

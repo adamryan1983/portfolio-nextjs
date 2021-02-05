@@ -128,6 +128,9 @@
 @mixin pulsate {
 	@include animate(pulsate, 0.75s, infinite, step-end);
 }
+@mixin typing {
+  @include animate(typing, 3.5s, steps(40,end))
+}
 
 .blinkingCursor {
   font-weight: 200;
@@ -135,10 +138,30 @@
   padding-left: 1rem;
   color: #2E3D48;
   @include pulsate;
-  // -webkit-animation: 1s blink step-end infinite;
-  // -moz-animation: 1s blink step-end infinite;
-  // -ms-animation: 1s blink step-end infinite;
+
 }
+.typing{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  @include pulsate;
+  @include typing;
+  // animation: 
+  //   typing 3.5s steps(40, end),
+  //   pulsate .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
+
 
 //responsive queries
 @media only screen and (max-width: 1024px) {

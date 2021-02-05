@@ -2,7 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styles from '../styles/Home.module.scss'
-import Image from 'next/image'
 
 function PhotoSocial() {
   return (

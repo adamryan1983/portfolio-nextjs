@@ -3,7 +3,8 @@
 .portfolioContainer {
   margin: 3rem 5rem;
   & h1,h2,h3,h4,h5 {
-    color: $thirdColor;
+    color: $fifthColor;
+    font-weight: bold;
   }
 }
 
@@ -12,8 +13,123 @@
   flex-wrap: wrap;
   overflow: hidden;
   justify-content: flex-start;
+  margin: 2rem 0 0 2rem;
   & > * {
     width: 30%;
-    border: 1px solid white;
+    height: fit-content;
   }
+}
+
+.portfolioImage {
+  width: 95%;
+  align-self: center;
+}
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.portfolioItem {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #374151;
+  border-radius: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+              0 6px 20px 0 rgb(0, 0, 0,0.5);
+  margin: 2rem 1rem;
+  &:hover{
+    background: #3879c9;
+    color: #FBBF24;
+  }
+  & > * {
+    display: flex;
+    flex-direction: column;
+  }
+  & a {
+    border: none;
+  }
+}
+
+.portfolioText {
+  color: $secondaryColor;
+  padding: 1rem 0 1rem 1rem;
+  width: 90%;
+  & a {
+    color: $secondaryColor;
+    border-bottom: 4px solid $thirdColorLighter;
+  }
+}
+
+.portfolioTitle {
+  font-weight: 700;
+  font-size:larger;
+  color: $secondaryColor;
+  padding: 1rem 0 0 2.5rem;
+
+}
+
+.tagBlock {
+  display: flex;
+  align-self: center;
+}
+
+.portfolioTags {
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  width: fit-content;
+  margin: 0 0.5rem 0.5rem 0;
+  color: #374151;
+  font-size: 0.9rem;
+  background-color: rgb(216, 216, 216);
+  border-radius: 9999px;
+}
+
+@media only screen and (max-width: 1200px) {
+  
+  .portfolioContents {
+    font-size: 0.85rem;
+    justify-content: center;
+    & > * {
+      width: 40%;
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  .portfolioText {
+    width: 100%;
+  }
+  
+  .portfolioTags {
+    padding: 0.15rem 0.6rem
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  
+  .portfolioContents {
+    font-size: 0.80rem;
+    & > * {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      margin-left: 0.5rem; 
+      margin-right: 0.5rem; 
+    }
+  }
+
+  .portfolioTitle {
+    font-size: 0.85rem;
+  }
+  
+  .portfolioTags {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
 }
