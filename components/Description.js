@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from '../styles/Home.module.scss'
+import styleLight from '../styles/HomeLight.module.scss'
 
-function Description() {
+function Description(props) {
   return (
-    <div className={styles.descriptionContainer}>
+    <div className={props.theme ? styles.descriptionContainer: styleLight.descriptionContainer}>
       <div>
         <h3>this is <span style={{fontWeight: "800", fontSize: "1.5rem", textDecoration: "underline"}}>adam ryan</span></h3>
         <div>
@@ -19,7 +20,7 @@ function Description() {
               <li>- Python</li>
               <li>- HTML5/CSS</li>
               <li>- Tailwind CSS framework</li>
-              <li>- Bootstrap CSS framework</li>
+              <li>- VueJS</li>
             </ul>
           </div>
           <h4># Utilities/Apps I use #</h4>

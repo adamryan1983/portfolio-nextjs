@@ -129,7 +129,7 @@
 	@include animate(pulsate, 0.75s, infinite, step-end);
 }
 @mixin typing {
-  @include animate(typing, 3.5s, steps(40,end))
+  @include animate(typing, 3.5s, infinite, steps(40,end))
 }
 
 .blinkingCursor {

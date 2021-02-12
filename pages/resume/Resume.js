@@ -1,12 +1,25 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styles from './Resume.module.scss'
 import Layout from '../../components/Layout'
 
 
 
-function Resume() {
+function Resume(props) {
+  let styling = props.theme ?     <style jsx global>{`
+  body {
+    background-color: #393e41;
+  }
+`}</style>
+: 
+<style jsx global>{`
+body {
+  background-color: #faf3dd;
+}
+
+`}</style>
   return (
-    <Layout title="resume">
+    <Layout title="resume"  theme={props.theme} setTheme={props.setTheme}>
+    {styling}
       <div className={styles.resumeContainer}>
       <div>
         <h3><span>adamryan-resume.txt</span></h3>
@@ -34,12 +47,12 @@ function Resume() {
             `}</code>
           </pre>
             <div className={styles.contactInfo}>
-              <div class="sm:flex sm:w-1/3 w-full block justify-center pr-4"> address: Bell Island, NL, A0A4H0 </div>
-              <div class="sm:flex sm:w-1/3 w-full block justify-center pr-4"> ph: 709 690 8380 </div>
-              <div class="sm:flex sm:w-1/3 w-full block justify-center"> email: adamryan1983@me.com </div>
+              <div> address: Bell Island, NL, A0A4H0 </div>
+              <div> ph: 709 690 8380 </div>
+              <div> email: adamryan1983@me.com </div>
             </div>
-            <div class="sm:pl-48 pl-2 sm:pr-20 pr-2 pt-8 sm:pt-10">
-              <div class="flex w-full"><span className={styles.textBlue}>### Objective ###</span></div>
+            <div>
+              <div><span className={styles.textBlue}>### Objective ###</span></div>
                 <div className={styles.contentText}>Seeking employment in the field of information technology
                     by using skills obtained in a combination of formal training,
                     personal growth and learning, and past employment.
@@ -68,7 +81,7 @@ function Resume() {
                   </div>
                 </div>
 
-                <div class="flex w-full"><span className={styles.textBlue}>### Experience ###</span></div>
+                <div><span className={styles.textBlue}>### Experience ###</span></div>
                 <div className={styles.contentText}>
                   2014 - Current
                   <div className={styles.textRed}>
@@ -156,13 +169,14 @@ function Resume() {
             </div>
             <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span></p>
             <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span></p>
-            <p class="pb-4"><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>exit 
+            <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>exit 
              <span className={styles.blinkingCursor}>|</span>
             </p>
             </p>
           </div>
         </div>
     </div>
+    {styling}
 </Layout>
   )
 }

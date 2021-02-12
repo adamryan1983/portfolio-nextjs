@@ -1,11 +1,11 @@
-@import './_variables.scss';
+@import './_variablesLight.scss';
 
 .mainPageContainer {
   display: flex;
   flex-direction: row;
   margin: 1rem 0 4rem 0;
   background-color: $mainColor;
-
+  color: $mainText;
   & li {
     list-style: none;
   }
@@ -15,7 +15,9 @@
   }
 }
 
-.photoSocialcontainer {
+.photoSocialcontainer { 
+  background-color: $mainColor;
+  color: $mainText;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,6 +33,8 @@
 }
 
 .socialBar {
+  background-color: $mainColor;
+  color: $mainText;
   list-style: none;
   margin-top: 2rem;
   display: flex;
@@ -59,19 +63,24 @@
   width: 80vw;
   margin-left: 8rem;
   justify-content: flex-start;
+  background-color: $mainColor;
+  color: $mainText;
   & h1, h2, h3, h4, h5 {
-    color: $fifthColor;
+    color: $mainText;
     font-weight: 400;
     padding: 1.5rem 0 0.5rem 0;
   }
   & a {
     color: $secondaryColor;
+    border-bottom: 4px solid $thirdColorLighter;
+    text-decoration: none;;
     &:hover {
       color: $fourthColor;
     }
   }
   & li {
     padding: 0.1rem;
+    color: $secondaryColor;
   }
 }
 

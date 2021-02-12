@@ -1,9 +1,22 @@
 import Layout from "../../components/Layout";
 import styles from './Future.module.scss'
 
-function Future() {
+function Future(props) {
+  let styling = props.theme ?     <style jsx global>{`
+  body {
+    background-color: #393e41;
+  }
+`}</style>
+: 
+<style jsx global>{`
+body {
+  background-color: #faf3dd;
+}
+
+`}</style>
   return (
-    <Layout title="future">
+    <Layout title="future" theme={props.theme} setTheme={props.setTheme}>
+    {styling}
       <div className={styles.futureContainer}>
         <div id="blogSection">
           <h3><span>future projects/ideas/goals</span></h3>
@@ -24,14 +37,14 @@ function Future() {
             Here are some programming languages/frameworks I am <span className={styles.textPink}>currently learning</span>/<span className={styles.textGreen}>want to learn</span>:
             <ul>
               <li className={styles.textPink}>- Java</li>
-              <li className={styles.textPink}>- React Framework</li>
               <li className={styles.textPink}>- NextJS</li>
               <li className={styles.textPink}>- Firebase</li>
-              <li className={styles.textGreen}>- VueJS</li>
+              <li className={styles.textPink}>- MongoDB</li>
+              <li className={styles.textPink}>- Vue JS</li>
               <li className={styles.textGreen}>- GoLang</li>
               <li className={styles.textGreen}>- Swift</li>
-              <li className={styles.textGreen}>- Rust</li>
-              <li className={styles.textGreen}>- ExpressJS/NodeJs for backend</li>
+              <li className={styles.textGreen}>- NuxtJS</li>
+              <li className={styles.textGreen}>- ExpressJS/NodeJS for backend</li>
             </ul>
           </div>
 

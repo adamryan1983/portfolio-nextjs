@@ -5,6 +5,20 @@ import styles from '../styles/layout.module.scss'
 import Head from 'next/head'
 
 function Layout(props) {
+  let styling = props.theme ?     <style jsx global>{`
+  body {
+    height: 100vh;
+    background-color: #393e41;
+  }
+`}</style>
+: 
+<style jsx global>{`
+body {
+  height: 100vh;
+  background-color: #faf3dd;
+}
+
+`}</style>
   return (
   <div className={styles.layoutContainer}>
     <Head>
@@ -12,11 +26,11 @@ function Layout(props) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
     </Head>
-    <NavBar />
+    <NavBar theme={props.theme} setTheme={props.setTheme}/>
     <div>
       {props.children}
     </div>
-    <Footer />
+    <Footer theme={props.theme} />
   </div>
   )}
 

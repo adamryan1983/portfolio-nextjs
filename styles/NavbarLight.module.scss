@@ -1,10 +1,11 @@
-@import './variables';
+@import './variablesLight';
 
 .menu {
   display: flex;
   justify-content: center;
   font-size: 1.1rem;
   background-color: $mainColor;
+  color: $mainText;
   & ul {
     list-style: none;
     & li {
@@ -29,7 +30,7 @@
   border: 2px solid;
   border-radius: 25px;
   padding: 0.4rem;
-  color: $secondaryColor;
+
   &:hover {
     color: $thirdColor;
   }
