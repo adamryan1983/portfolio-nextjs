@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout'
 import styles from './Portfolio.module.scss'
 import styleLight from './PortfolioLight.module.scss'
-import {portfolioData} from './data'
+import {portfolioData} from '../../components/data'
 
 function Portfolio(props) {
   let styling = props.theme ?     <style jsx global>{`
@@ -27,7 +27,7 @@ body {
 
         <div className={props.theme ? styles.portfolioContents : styleLight.portfolioContents}>
           {portfolioData.map((data) => 
-            <div className={props.theme ? styles.portfolioItem : styleLight.portfolioItem}>
+            <div className={props.theme ? styles.portfolioItem : styleLight.portfolioItem} key={data.id}>
             <a href={data.portURL} target="_blank">
             <img className={styles.portfolioImage} src={data.image} alt="todo-app" />
             <div className={props.theme ? styles.portfolioTitle : styleLight.portfolioTitle}>{data.portTitle}</div>
@@ -37,7 +37,7 @@ body {
             </div>
             <div className={props.theme ? styles.tagBlock : styleLight.tagBlock}>
                 {data.tags.map((tag) => 
-                  <div className={props.theme ? styles.portfolioTags : styleLight.portfolioTags}>{tag}</div>
+                  <div className={props.theme ? styles.portfolioTags : styleLight.portfolioTags} key={tag}>{tag}</div>
                 )}
             </div>
           </div>
