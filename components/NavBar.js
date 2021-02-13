@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import styles from '../styles/Navbar.module.scss'
 import styleLight from '../styles/NavbarLight.module.scss'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faMoon } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
