@@ -4,6 +4,7 @@ import Layout from '../../components/Layout'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import styles from './Contact.module.scss'
+import styleLight from './ContactLight.module.scss'
 
 function Contact(props) {
   let styling = props.theme ?     <style jsx global>{`
@@ -21,7 +22,7 @@ body {
   return (
     <Layout title="contact" theme={props.theme} setTheme={props.setTheme}>
     {styling}
-      <div className={styles.contactContainer}>
+      <div className={props.theme ? styles.contactContainer : styleLight.contactContainer}>
         <h3><span>contact info</span></h3>
         ===============
         <div className={styles.contactLayout}>

@@ -1,6 +1,7 @@
-@import '../../styles/variables';
+@import '../../styles/variablesLight';
 .contactContainer {
   padding: 3rem 5rem;
+  color: $mainText;
   & h1,h2,h3,h4,h5 {
     color: $headerColor;
   }

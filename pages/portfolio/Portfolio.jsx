@@ -24,7 +24,7 @@ body {
         <div>
             ===========
         </div>
-        {console.log(portfolioData[0].blurb)}
+
         <div className={props.theme ? styles.portfolioContents : styleLight.portfolioContents}>
           {portfolioData.map((data) => 
             <div className={props.theme ? styles.portfolioItem : styleLight.portfolioItem}>

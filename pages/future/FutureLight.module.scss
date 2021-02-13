@@ -1,8 +1,9 @@
-@import '../../styles/variables';
+@import '../../styles/variablesLight';
 
 .futureContainer {
   display: flex;
   padding: 3rem 8rem;
+  color: $mainText;
   & ul {
   list-style: none;
   }

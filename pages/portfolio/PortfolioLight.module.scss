@@ -5,7 +5,7 @@
   color: $mainText;
   margin: 3rem 5rem;
   & h1,h2,h3,h4,h5 {
-    color: $fifthColor;
+    color: $headerColor;
     font-weight: bold;
   }
 }
@@ -126,9 +126,8 @@
   }
 
   .portfolioTitle {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
   }
-  
   .portfolioTags {
     padding: 0.1rem 0.4rem;
     font-size: 0.7rem;

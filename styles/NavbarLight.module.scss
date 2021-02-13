@@ -6,8 +6,6 @@
   font-size: 1.1rem;
   background-color: $mainColor;
   color: $mainText;
-  & ul {
-    list-style: none;
     & li {
       display: inline-block;
       padding:  0 0.8rem;
@@ -19,7 +17,25 @@
           background-color: $thirdColor;
         }
       }
-    }
+  }
+}
+
+.menuMobile {
+  display: none;
+  justify-content: center;
+  font-size: 1.1rem;
+  background-color: $mainColor;
+    & li {
+      display: inline-block;
+      padding:  0 0.8rem;
+      & a {
+        text-decoration: none;
+        color: $fourthColor;
+        border: none;
+        &:hover {
+          background-color: $thirdColor;
+        }
+      }
   }
 }
 
@@ -34,4 +50,32 @@
   &:hover {
     color: $thirdColor;
   }
+}
+
+.mobileListOpen {
+  display: block;
+  margin-left: 2rem;
+  & li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0.2rem 0 ;
+  }
+
+}
+.mobileListClosed {
+  display: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    padding-bottom: 1.5rem;
+
+  }
+  .menu {display: none}
 }

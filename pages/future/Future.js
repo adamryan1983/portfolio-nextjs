@@ -1,5 +1,6 @@
 import Layout from "../../components/Layout";
 import styles from './Future.module.scss'
+import styleLight from './FutureLight.module.scss'
 
 function Future(props) {
   let styling = props.theme ?     <style jsx global>{`
@@ -12,12 +13,11 @@ function Future(props) {
 body {
   background-color: #faf3dd;
 }
-
 `}</style>
   return (
     <Layout title="future" theme={props.theme} setTheme={props.setTheme}>
     {styling}
-      <div className={styles.futureContainer}>
+      <div className={props.theme ? styles.futureContainer : styleLight.futureContainer}>
         <div id="blogSection">
           <h3><span>future projects/ideas/goals</span></h3>
           =================================

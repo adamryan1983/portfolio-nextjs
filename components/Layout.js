@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import NavBar from "./NavBar";
+import NavBarMobile from './NavBarMobile'
 import Footer from './Footer';
 import styles from '../styles/layout.module.scss'
 import Head from 'next/head'
@@ -27,6 +28,7 @@ body {
       <meta charSet="utf-8" />
     </Head>
     <NavBar theme={props.theme} setTheme={props.setTheme}/>
+    <NavBarMobile theme={props.theme} setTheme={props.setTheme}/>
     <div>
       {props.children}
     </div>

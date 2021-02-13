@@ -1,10 +1,58 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import styles from './Resume.module.scss'
 import Layout from '../../components/Layout'
 
-
-
 function Resume(props) {
+
+  const words = [".,,", "...loading file"];
+
+  const [index, setIndex] = useState(0);
+  const [subIndex, setSubIndex] = useState(0);
+  const [blink, setBlink] = useState(true);
+  const [reverse, setReverse] = useState(false);
+
+  const loadDiv = () => {
+    document.querySelector('#resumeContent').style.display = "flex"
+  }
+
+  //typewriter
+  // typeWriter
+  useEffect(() => {
+    if (index === words.length) return;
+
+    if ( subIndex === words[index].length + 1 && 
+        index !== words.length - 1 && !reverse ) {
+      setReverse(true);
+      return;
+    }
+
+    if (subIndex === 0 && reverse) {
+      setReverse(false);
+      setIndex((prev) => prev + 1);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setSubIndex((prev) => prev + (reverse ? -1 : 1));
+    }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 :
+                150, parseInt(Math.random() * 350)));
+
+    return () => 
+    clearTimeout(timeout);
+  }, [subIndex, index, reverse]);
+
+  // blinker
+  useEffect(() => {
+    const timeout2 = setTimeout(() => {
+      setBlink((prev) => !prev);
+    }, 500);
+    return () => clearTimeout(timeout2);
+  }, [blink]);
+
+  useEffect(() => {
+    setTimeout(function(){ loadDiv(); }, 6500);
+  },[])
+
   let styling = props.theme ?     <style jsx global>{`
   body {
     background-color: #393e41;
@@ -19,6 +67,7 @@ body {
 `}</style>
   return (
     <Layout title="resume"  theme={props.theme} setTheme={props.setTheme}>
+    
     {styling}
       <div className={styles.resumeContainer}>
       <div>
@@ -31,9 +80,9 @@ body {
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span> sudo nano adamryan-resume.txt </p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} Enter admin password: </p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} Password correct</p>
-          <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} <span className={styles.typing}> . . file opening</span></p>
+          <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>{'>'} <span>{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></p>
           <p><span className={styles.textYellow}>adamryan@localhost</span>:<span className={styles.textBlue}>~</span><span className={styles.textPink}>$ </span>
-          <div className={styles.resumeContent}>
+          <div className={styles.resumeContent} id="resumeContent" style={{display: "none"}}>
           <pre className={styles.ascii}>
             <code>{`
              _                   _____                   
