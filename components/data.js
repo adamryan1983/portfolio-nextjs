@@ -4,7 +4,7 @@ export const portfolioData = [
     blurb:
       '<p>I built this app using Flutter/Dart for mobile deployment. It is an app that allows local residents to track current ferry/lineup conditions for the Bell Island/Portugal Cove-St.Philips Ferry Crossing.</p>',
     portURL: 'https://github.com/adamryan1983/issherunnin_flutter',
-    portTitle: "Is She Runnin'?",
+    portTitle: "Is She Runnin'? (Mobile)",
     tags: ['#Flutter', '#Dart', '#Firebase'],
     image: '/images/issherunnin-mobile.png',
   },
@@ -19,11 +19,11 @@ export const portfolioData = [
     image: '/images/mooose.png',
   },
   {
-    id: 2,
+    id: 3,
     blurb:
       '<p>I built this app using NextJS/React as a front end and Firebase as the backend. This is the web version of the Ferry App I created. The site features login/authentication using account creation, login in with Google option, and a log in with Facebook option.</p>',
     portURL: 'https://issherunnin.ca',
-    portTitle: 'To-Do App',
+    portTitle: "Is She Runnin'? (Web)",
     tags: ['#React', '#NextJS', '#Typescript', '#Firebase'],
     image: '/images/issherunnin-web.png',
   },
