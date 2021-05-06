@@ -1,15 +1,30 @@
-import React from 'react'
-import styles from '../styles/Home.module.scss'
-import styleLight from '../styles/HomeLight.module.scss'
+import React from 'react';
+import styles from '../styles/Home.module.scss';
+import styleLight from '../styles/HomeLight.module.scss';
 
 function Description(props) {
   return (
-    <div className={props.theme ? styles.descriptionContainer: styleLight.descriptionContainer}>
+    <div
+      className={
+        props.theme
+          ? styles.descriptionContainer
+          : styleLight.descriptionContainer
+      }
+    >
       <div>
-        <h3>this is <span style={{fontWeight: "800", fontSize: "1.5rem", textDecoration: "underline"}}>adam ryan</span></h3>
-        <div>
-            ======================
-        </div>
+        <h3>
+          this is{' '}
+          <span
+            style={{
+              fontWeight: '800',
+              fontSize: '1.5rem',
+              textDecoration: 'underline',
+            }}
+          >
+            adam ryan
+          </span>
+        </h3>
+        <div>======================</div>
         <div>
           <h4># Software/Web Developer #</h4>
           <div>
@@ -17,10 +32,9 @@ function Description(props) {
             <ul>
               <li>- Javascript</li>
               <li>- React/NextJS Framework</li>
-              <li>- Python</li>
               <li>- HTML5/CSS</li>
-              <li>- Tailwind CSS framework</li>
-              <li>- VueJS</li>
+              <li>- Flutter/Dart</li>
+              <li>- Swift/SwiftUI</li>
             </ul>
           </div>
           <h4># Utilities/Apps I use #</h4>
@@ -33,16 +47,35 @@ function Description(props) {
           </ul>
           <h4># Projects I've Created #</h4>
           <ul>
-            <li>- <a href="https://adamryanphotography.ca" target="_blank">Adam Ryan Photography web page</a></li>
-            <li>- <a href="https://github.com/adamryan1983/covid-19-tracker" target="_blank">Covid-19 Tracker</a></li>
-            <li>- <a href="https://github.com/adamryan1983/PWA-Weather-App" target="_blank">PWA Weather App</a></li>
-            <li>- <a href="https://github.com/adamryan1983/todo-List" target="_blank">To-Do App</a></li>
-            <li>- <a href="https://github.com/adamryan1983/Go-Fish-Game" target="_blank">Go Fish Game</a></li>
+            <li>
+              -{' '}
+              <a href='https://adamryanphotography.ca' target='_blank'>
+                Adam Ryan Photography web page
+              </a>
+            </li>
+            <li>
+              -{' '}
+              <a href='https://issherunnin.ca' target='_blank'>
+                Is She Runnin' Ferry Tracker
+              </a>
+            </li>
+            <li>
+              -{' '}
+              <a href='https://downhomehvac.ca' target='_blank'>
+                Downhome HVAC Website
+              </a>
+            </li>
+            <li>
+              -{' '}
+              <a href='https://github.com/adamryan1983/mooose' target='_blank'>
+                'Mooose', a moose tracker app for android/ios
+              </a>
+            </li>
           </ul>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Description
+export default Description;
