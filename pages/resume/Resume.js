@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Resume.module.scss';
 import Layout from '../../components/Layout';
 
@@ -9,6 +9,8 @@ function Resume(props) {
   const [subIndex, setSubIndex] = useState(0);
   const [blink, setBlink] = useState(true);
   const [reverse, setReverse] = useState(false);
+
+  const resumeRef = useRef();
 
   const loadDiv = () => {
     document.querySelector('#resumeContent').style.display = 'flex';
